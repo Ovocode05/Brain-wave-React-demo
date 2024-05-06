@@ -23,4 +23,4 @@ This project serves as a demonstration of UI/UX design principles implemented us
 ## Acknowledgements
 - [React](https://reactjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
-- [Create React App](https://create-react-app.dev/)
+- [Vite](https://vitejs.dev/)
