@@ -1,10 +1,10 @@
 import React from "react";
 import ButtonSvg from "../assets/svg/ButtonSvg";
 
-function Button({ children, classname, href, onClick, px, white }) {
+function Button({ children, className, href, onClick, px, white }) {
   const classes = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
     px || "px-7"
-  } ${white ? "text-n-8" : "text-n-1"}`;
+  } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
   const spanClases = "relative z-10";
   const renderButton = () => (
     <button className={classes}>
@@ -18,7 +18,7 @@ function Button({ children, classname, href, onClick, px, white }) {
       {ButtonSvg(white)}
     </a>
   );
-  return href ? renderLink() : renderButton();
+  return href ? renderButton() : renderLink();
 }
 
 export default Button;
