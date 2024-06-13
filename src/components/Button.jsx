@@ -7,18 +7,18 @@ function Button({ children, className, href, onClick, px, white }) {
   } ${white ? "text-n-8" : "text-n-1"} ${className || ""}`;
   const spanClases = "relative z-10";
   const renderButton = () => (
-    <button className={classes}>
+    <button className={classes} onClick={onClick}>
       <span className={spanClases}>{children}</span>
       {ButtonSvg(white)}
     </button>
   );
   const renderLink = () => (
-    <a href={href}>
+    <a href={href} className={classes}>
       <span className={spanClases}>{children}</span>
       {ButtonSvg(white)}
     </a>
   );
-  return href ? renderButton() : renderLink();
+  return href ? renderLink() : renderButton();
 }
 
 export default Button;
